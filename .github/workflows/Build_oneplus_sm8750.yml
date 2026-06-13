@@ -5,6 +5,12 @@ permissions:
 on:
   workflow_dispatch:
     inputs:
+      enable_release:
+        description: "发布到 Releases"
+        required: true
+        default: true
+        type: boolean
+
       device_name:
         description: "📝请选择要编译的机型："
         required: true
@@ -65,12 +71,6 @@ on:
 
       enable_bbg:
         description: "添加BBG基带守护"
-        required: true
-        default: true
-        type: boolean
-
-      enable_release:
-        description: "发布到 Release"
         required: true
         default: true
         type: boolean
